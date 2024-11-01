@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <title>Real-Time Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Location Tracker</h1>
+
+        <button id="logout-button" style="display: none;">Logout</button>
+
+        <div id="map" style="height: 500px;"></div>
+        
+        <form id="login-form" class="auth-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div id="login-error" class="error-message"></div>
+        </form>
+
+        <form id="register-form" class="auth-form">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+            <div id="register-error" class="error-message"></div>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="/js/script.js"></script> 
+</body>
+</html>
